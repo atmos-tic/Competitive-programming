@@ -4,11 +4,11 @@ int main(void){
 	int M, N;
 	int A[50], B[50];
 	int i = 0, j = 0, k = 0;
-	char a[50][50], b[50][50];
+	int a[50][50], b[50][50];
 	int check_start[2500][2] = { 0 }, check_flag = 0, stop_flag = 1, check = 0, checkMax = 0;
-	scanf("%d, %d", &N, &M);
+	scanf_s("%d, %d", &N, &M);
 	for (i = 0; i < N; i++){
-		scanf("%s", a[i]);
+		scanf_s("%d", A[i]);
 		for (j = 0; j < N; j++){
 			if (a[i][j] == '.')A[i] = (A[i]<<1) + 0;
 			else if (a[i][j] == '#')A[i] = (A[i] << 1) + 1;
@@ -16,7 +16,7 @@ int main(void){
 	}
 	printf("aa\n");
 	for(i = 0; i < M; i++){
-		scanf("%s", b[i]);
+		scanf_s("%d", B[i]);
 		for (j = 0; j < M; j++){
 			if (b[i][j] == '.')B[i] = (B[i] << 1) + 0;
 			else if (b[i][j] == '#')B[i] = (B[i] << 1) + 1;
@@ -58,6 +58,6 @@ int main(void){
 	else{
 		printf("Yes\n");
 	}
-	scanf("%s", a);
+	scanf_s("%s", a);
 	return 0;
 }
